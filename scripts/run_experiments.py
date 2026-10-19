@@ -46,7 +46,7 @@ def commands(root, args):
     multi = args.cache_root/'heo2026_multiwindow_t10'
     wide = args.cache_root/'wide_m1000_p1000'
     preparation = [
-        command('prepare_heo2026_cache.py', '--subjects', *SUBJECTS,
+        command('prepare_srm_cnn_cache.py', '--subjects', *SUBJECTS,
                 '--source-root', args.source_root, '--electrode-file', args.electrode_file,
                 '--output-root', medium),
         command('prepare_multiwindow_cache.py', '--subjects', *SUBJECTS,
@@ -73,7 +73,7 @@ def commands(root, args):
     decoding = {
         'pca': command('run_pca_alignment_baselines.py', *common, '--cache-root', multi,
                        '--variants', 'pca', 'pca_ha', '--output-root', args.output_root/'pca'),
-        'srm-cnn': command('run_heo2026_benchmark.py', *common, '--cache-root', medium,
+        'srm-cnn': command('run_srm_cnn_baseline.py', *common, '--cache-root', medium,
                            '--variants', 'direct', '--output-root', args.output_root/'srm_cnn'),
         'medium': command('run_multiwindow_srm.py', *common, '--cache-root', multi,
                           '--variants', 'matched_direct_combined', '--output-root', args.output_root/'medium'),

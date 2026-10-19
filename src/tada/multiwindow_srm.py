@@ -16,7 +16,7 @@ from sklearn.model_selection import KFold
 from torch import nn
 from torch.utils.data import DataLoader, TensorDataset
 
-from .heo2026_benchmark import (
+from .srm_cnn_baseline import (
     SUBJECTS,
     device_for,
     fit_srm,

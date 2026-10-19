@@ -22,7 +22,7 @@ from sklearn.model_selection import KFold
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from tada.heo2026_benchmark import (  # noqa: E402
+from tada.srm_cnn_baseline import (  # noqa: E402
     SUBJECTS, device_for, mean_metrics, predict, target_pca, unit,
 )
 from tada.multiwindow_srm import (  # noqa: E402

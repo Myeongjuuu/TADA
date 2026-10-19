@@ -37,7 +37,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--subjects", nargs="+", default=list(SUBJECTS))
     parser.add_argument("--variants", nargs="+", choices=VARIANTS, default=list(VARIANTS))
     parser.add_argument("--cache-root", type=Path, default=project / "data/ecog_caches/heo2026_625ms_sw200_t10")
-    parser.add_argument("--output-root", type=Path, default=project / "results/heo2026_benchmark")
+    parser.add_argument("--output-root", type=Path, default=project / "results/srm_cnn")
     parser.add_argument("--outer-folds", type=int, default=5)
     parser.add_argument("--srm-features", type=int, default=5)
     parser.add_argument("--srm-iterations", type=int, default=100)

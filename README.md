@@ -115,7 +115,7 @@ participant. Full paper runs omit the debugging limits.
 ```text
 src/tada/models.py              residual temporal encoder and adaptive fusion
 src/tada/losses.py              semantic hard-negative mining and ranking loss
-src/tada/heo2026_benchmark.py    SRM, preprocessing, baseline and retrieval metrics
+src/tada/srm_cnn_baseline.py    SRM, preprocessing, baseline and retrieval metrics
 src/tada/multiwindow_srm.py      multi-window projections and decoder training
 scripts/                       data preparation, training/evaluation, figure analysis
 ```
