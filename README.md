@@ -96,6 +96,26 @@ python scripts/analyze_statistics.py
 This optional step requires completed five-fold medium, long, multi and EGR runs.
 It is not needed to train or evaluate models.
 
+## Reference results and tables
+
+Selected reference configurations and fold metrics are included under
+`results/`, with generated paper tables in `reports/`. Check all 140 printed
+means and sample SDs without downloading data or installing scientific packages:
+
+```bash
+python scripts/summarize_paper.py --check-manuscript
+```
+
+For tables from a complete new run, use:
+
+```bash
+python scripts/summarize_paper.py --layout run --results-root results --output-dir results/tables
+```
+
+See [the paper-to-code mapping](docs/PAPER_MAP.md),
+[reproduction instructions](docs/REPRODUCE.md), and
+[data layout](data/README.md) for details.
+
 ## Paths and test runs
 
 The runner accepts `--source-root`, `--electrode-file`, `--cache-root` (parent

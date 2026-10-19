@@ -1,0 +1,106 @@
+{
+  "unit": "held-out participant",
+  "n": 8,
+  "test": "two-sided exact paired sign-flip permutation",
+  "results": {
+    "Long-only minus Medium window": {
+      "auc_roc": {
+        "mean_difference": 0.020445775233896804,
+        "sd_difference": 0.0048697172791810975,
+        "cohens_dz": 4.198554877365491,
+        "exact_two_sided_p": 0.0078125,
+        "holm_p_across_3_auc_tests": 0.0234375
+      },
+      "pairwise_accuracy": {
+        "mean_difference": 0.019051968503937006,
+        "sd_difference": 0.005384525198109901,
+        "cohens_dz": 3.5382819845702844,
+        "exact_two_sided_p": 0.0078125
+      },
+      "top_10": {
+        "mean_difference": 0.0037731256085686456,
+        "sd_difference": 0.0035937864892922273,
+        "cohens_dz": 1.0499025525892436,
+        "exact_two_sided_p": 0.015625
+      },
+      "top_50": {
+        "mean_difference": 0.0057205452775072885,
+        "sd_difference": 0.007462845470062422,
+        "cohens_dz": 0.7665367453279773,
+        "exact_two_sided_p": 0.078125
+      },
+      "mrr": {
+        "mean_difference": 0.0006954110550775844,
+        "sd_difference": 0.0012578129660079998,
+        "cohens_dz": 0.5528731805688522,
+        "exact_two_sided_p": 0.203125
+      }
+    },
+    "Multi-window fusion minus Long-only": {
+      "auc_roc": {
+        "mean_difference": 0.003830175772914876,
+        "sd_difference": 0.004840667643467802,
+        "cohens_dz": 0.7912494835466496,
+        "exact_two_sided_p": 0.0703125,
+        "holm_p_across_3_auc_tests": 0.0703125
+      },
+      "pairwise_accuracy": {
+        "mean_difference": 0.002695275590551202,
+        "sd_difference": 0.004765477520921614,
+        "cohens_dz": 0.5655835283491071,
+        "exact_two_sided_p": 0.1640625
+      },
+      "top_10": {
+        "mean_difference": 0.0019961051606621188,
+        "sd_difference": 0.0013238771140719897,
+        "cohens_dz": 1.5077722391638646,
+        "exact_two_sided_p": 0.0078125
+      },
+      "top_50": {
+        "mean_difference": 0.002312560856864661,
+        "sd_difference": 0.0054839218336912585,
+        "cohens_dz": 0.42169836241229997,
+        "exact_two_sided_p": 0.2734375
+      },
+      "mrr": {
+        "mean_difference": 0.0016790815762128424,
+        "sd_difference": 0.0017812468860699186,
+        "cohens_dz": 0.9426439363032431,
+        "exact_two_sided_p": 0.03125
+      }
+    },
+    "Multi-window fusion minus Medium window": {
+      "auc_roc": {
+        "mean_difference": 0.02427595100681168,
+        "sd_difference": 0.00579466375384326,
+        "cohens_dz": 4.189363186209186,
+        "exact_two_sided_p": 0.0078125,
+        "holm_p_across_3_auc_tests": 0.0234375
+      },
+      "pairwise_accuracy": {
+        "mean_difference": 0.021747244094488208,
+        "sd_difference": 0.004979501447449825,
+        "cohens_dz": 4.367353704782177,
+        "exact_two_sided_p": 0.0078125
+      },
+      "top_10": {
+        "mean_difference": 0.005769230769230764,
+        "sd_difference": 0.003666911970854363,
+        "cohens_dz": 1.573321316433614,
+        "exact_two_sided_p": 0.0078125
+      },
+      "top_50": {
+        "mean_difference": 0.00803310613437195,
+        "sd_difference": 0.006914809049650117,
+        "cohens_dz": 1.1617249408757595,
+        "exact_two_sided_p": 0.0078125
+      },
+      "mrr": {
+        "mean_difference": 0.002374492631290427,
+        "sd_difference": 0.002224195455894395,
+        "cohens_dz": 1.0675737264896057,
+        "exact_two_sided_p": 0.0234375
+      }
+    }
+  }
+}

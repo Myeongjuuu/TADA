@@ -1,0 +1,200 @@
+{
+  "method": "Multi-window retrieval-aware SRM decoder",
+  "protocol": {
+    "alignment": "train-only BrainIAK SRM fitted independently for each real temporal window",
+    "windows": [
+      "short",
+      "medium",
+      "long"
+    ],
+    "factorial_design": "direct versus multi-window crossed with point versus combined retrieval loss",
+    "hard_negative_mining": "outer-train semantic targets only",
+    "test_used_for_training_or_selection": false
+  },
+  "configuration": {
+    "held_out_subjects": [
+      "01",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "subjects": [
+      "01",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "variants": [
+      "matched_long_combined"
+    ],
+    "cache_root": "data/ecog_caches/heo2026_multiwindow_t10",
+    "output_root": "results/matched_long_control",
+    "outer_folds": 5,
+    "srm_features": 5,
+    "srm_iterations": 100,
+    "target_components": 50,
+    "validation_fraction": 0.1,
+    "hidden_dim": 96,
+    "matched_direct_hidden_dim": 113,
+    "dropout": 0.2,
+    "epochs": 100,
+    "patience": 10,
+    "batch_size": 32,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "temperature": 0.07,
+    "hard_negatives": 32,
+    "ranking_weight": 0.1,
+    "seed": 0,
+    "device": "cuda",
+    "max_words": null,
+    "overwrite": false
+  },
+  "held_out_subject": "sub-06",
+  "source_subjects": [
+    "sub-01",
+    "sub-03",
+    "sub-04",
+    "sub-05",
+    "sub-07",
+    "sub-08",
+    "sub-09"
+  ],
+  "n_words": 5135,
+  "variants": {
+    "matched_long_combined": {
+      "folds": [
+        {
+          "fold": 1,
+          "n_train": 4108,
+          "n_test": 1027,
+          "parameter_count": 174070,
+          "best_epoch": 3,
+          "held_out": {
+            "auc_roc": 0.7306926758116596,
+            "pairwise_accuracy": 0.7235275590551181,
+            "top_10": 0.08763388510223953,
+            "top_50": 0.2697176241480039,
+            "mrr": 0.04175331668809091,
+            "n_queries": 1027
+          },
+          "source_mean": {
+            "auc_roc": 0.7130369173780899,
+            "pairwise_accuracy": 0.7009943757030371,
+            "top_10": 0.065238558909445,
+            "top_50": 0.24857421059952703,
+            "mrr": 0.03331813124780272
+          },
+          "held_out_mean_window_weights": null
+        },
+        {
+          "fold": 2,
+          "n_train": 4108,
+          "n_test": 1027,
+          "parameter_count": 174070,
+          "best_epoch": 4,
+          "held_out": {
+            "auc_roc": 0.7594286028769951,
+            "pairwise_accuracy": 0.7302677165354331,
+            "top_10": 0.07108081791626096,
+            "top_50": 0.28140214216163584,
+            "mrr": 0.035398282215190306,
+            "n_queries": 1027
+          },
+          "source_mean": {
+            "auc_roc": 0.7266665705470076,
+            "pairwise_accuracy": 0.698326209223847,
+            "top_10": 0.0650994575045208,
+            "top_50": 0.26234524968702183,
+            "mrr": 0.0339660151787834
+          },
+          "held_out_mean_window_weights": null
+        },
+        {
+          "fold": 3,
+          "n_train": 4108,
+          "n_test": 1027,
+          "parameter_count": 174070,
+          "best_epoch": 8,
+          "held_out": {
+            "auc_roc": 0.7498978262028209,
+            "pairwise_accuracy": 0.7044724409448819,
+            "top_10": 0.07400194741966894,
+            "top_50": 0.28334956183057447,
+            "mrr": 0.03939557999295053,
+            "n_queries": 1027
+          },
+          "source_mean": {
+            "auc_roc": 0.7150559049708622,
+            "pairwise_accuracy": 0.6898177727784027,
+            "top_10": 0.05939629990262902,
+            "top_50": 0.24203644456809012,
+            "mrr": 0.032693255329997326
+          },
+          "held_out_mean_window_weights": null
+        },
+        {
+          "fold": 4,
+          "n_train": 4108,
+          "n_test": 1027,
+          "parameter_count": 174070,
+          "best_epoch": 5,
+          "held_out": {
+            "auc_roc": 0.715990937545049,
+            "pairwise_accuracy": 0.7070236220472441,
+            "top_10": 0.0759493670886076,
+            "top_50": 0.23369036027263876,
+            "mrr": 0.04077188917881502,
+            "n_queries": 1027
+          },
+          "source_mean": {
+            "auc_roc": 0.7084928748808028,
+            "pairwise_accuracy": 0.6840899887514063,
+            "top_10": 0.057031576018917784,
+            "top_50": 0.21755459730143276,
+            "mrr": 0.02889321005212511
+          },
+          "held_out_mean_window_weights": null
+        },
+        {
+          "fold": 5,
+          "n_train": 4108,
+          "n_test": 1027,
+          "parameter_count": 174070,
+          "best_epoch": 3,
+          "held_out": {
+            "auc_roc": 0.7131550783221277,
+            "pairwise_accuracy": 0.704251968503937,
+            "top_10": 0.07108081791626096,
+            "top_50": 0.26874391431353456,
+            "mrr": 0.034673006449729475,
+            "n_queries": 1027
+          },
+          "source_mean": {
+            "auc_roc": 0.6975846786975362,
+            "pairwise_accuracy": 0.6743757030371204,
+            "top_10": 0.05244122965641953,
+            "top_50": 0.21880650994575043,
+            "mrr": 0.02948777746548466
+          },
+          "held_out_mean_window_weights": null
+        }
+      ],
+      "held_out_mean": {
+        "auc_roc": 0.7338330241517305,
+        "pairwise_accuracy": 0.7139086614173229,
+        "top_10": 0.0759493670886076,
+        "top_50": 0.2673807205452775,
+        "mrr": 0.03839841490495525
+      }
+    }
+  }
+}

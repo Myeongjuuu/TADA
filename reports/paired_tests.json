@@ -1,0 +1,25 @@
+{
+  "Long-only minus Medium": {
+    "n": 8,
+    "mean_difference": 0.020445775233896804,
+    "exact_two_sided_p": 0.0078125,
+    "holm_p_across_3_auc_tests": 0.0234375
+  },
+  "Multi-scale minus Long-only": {
+    "n": 8,
+    "mean_difference": 0.003830175772914876,
+    "exact_two_sided_p": 0.0703125,
+    "holm_p_across_3_auc_tests": 0.0703125
+  },
+  "Multi-scale minus Medium": {
+    "n": 8,
+    "mean_difference": 0.02427595100681168,
+    "exact_two_sided_p": 0.0078125,
+    "holm_p_across_3_auc_tests": 0.0234375
+  },
+  "EGR minus same-run base": {
+    "n": 8,
+    "mean_difference": 0.00995196620121197,
+    "exact_two_sided_p": 0.0078125
+  }
+}
